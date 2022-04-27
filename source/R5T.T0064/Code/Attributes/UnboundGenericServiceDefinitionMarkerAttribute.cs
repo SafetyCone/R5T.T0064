@@ -4,8 +4,8 @@
 namespace R5T.T0064
 {
     /// <summary>
-    /// Marks an interface as being a service definition. Not inherited.
-    /// Also allows specifying that an interface is *not* a service definition. (Useful for decorating extraneous members that also happen to be in a service definition file.)
+    /// <para>Marks an interface as representing a service that is an unbound generic type (like ILogger&lt;&gt;). The interface is *not* the service, does *not* inherit from the service, and does *not* implement the service, just represents the service. This representation is useful in specifying IServiceAction&lt;T&gt; types. </para>
+    /// <para>Example usage: [UnboundGenericServiceDefinitionMarker(typeof(ILogger&lt;&gt;))]</para>
     /// </summary>
     [AttributeUsage(AttributeTargets.Interface, Inherited = false, AllowMultiple = false)]
     public sealed class UnboundGenericServiceDefinitionMarkerAttribute : Attribute

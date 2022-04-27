@@ -4,8 +4,8 @@
 namespace R5T.T0064
 {
     /// <summary>
-    /// Specifies the service definition interface for a service implementation class.
-    /// Useful in situations where a service implementation implements multiple interfaces, only one of which should be considered its service definition. 
+    /// Specifies the single service definition interface to use for a service implementation class with multiple service definitions in its base types list.
+    /// Useful in situations where a service implementation implements multiple service definition interfaces, only one of which should be considered its service definition. 
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public sealed class SpecifyServiceDefinitionAttribute : Attribute
