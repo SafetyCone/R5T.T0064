@@ -1,5 +1,7 @@
 ﻿using System;
 
+using R5T.T0143;
+
 
 namespace R5T.T0064
 {
@@ -8,6 +10,7 @@ namespace R5T.T0064
     /// Also allows specifying that an interface is *not* a service definition. (Useful for decorating extraneous types that also happen to be in a service definition file.)
     /// </summary>
     [AttributeUsage(AttributeTargets.Interface, Inherited = false, AllowMultiple = false)]
+    [MarkerAttributeMarker]
     public sealed class ServiceDefinitionMarkerAttribute : Attribute
     {
         private readonly bool zIsServiceDefinition;

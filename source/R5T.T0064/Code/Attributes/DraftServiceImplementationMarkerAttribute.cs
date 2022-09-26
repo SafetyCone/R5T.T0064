@@ -1,5 +1,7 @@
 ﻿using System;
 
+using R5T.T0143;
+
 
 namespace R5T.T0064
 {
@@ -11,6 +13,7 @@ namespace R5T.T0064
     /// Not inherited.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    [MarkerAttributeMarker]
     public class DraftServiceImplementationMarkerAttribute : Attribute
     {
         private readonly bool zIsServiceImplementation;

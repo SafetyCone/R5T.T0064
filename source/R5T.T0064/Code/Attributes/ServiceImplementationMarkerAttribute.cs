@@ -1,5 +1,7 @@
 ﻿using System;
 
+using R5T.T0143;
+
 
 namespace R5T.T0064
 {
@@ -8,6 +10,7 @@ namespace R5T.T0064
     /// Also allows marking a class as *not* being a service implementation. (Useful for decorating extraneous classes that happen to be in a service implementation code file.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    [MarkerAttributeMarker]
     public class ServiceImplementationMarkerAttribute : Attribute
     {
         private readonly bool zIsServiceImplementation;
